@@ -1,0 +1,24 @@
+# Plan d’adressage & segments (exemple)
+wan:
+  type: nat
+  cidr: 10.0.2.0/24
+  gateway: 10.0.2.1
+  pfsense_wan: dhcp # 10.0.2.x
+
+lan:
+  cidr: 192.168.1.0/24
+  gateway: 192.168.1.1  # pfSense LAN
+  dhcp_range: 192.168.1.100-192.168.1.200
+
+hosts:
+  pfsense:
+    lan_ip: 192.168.1.1
+  client-a:
+    ip: 192.168.1.10
+    gw: 192.168.1.1
+  heimdall:
+    ip: 192.168.1.20
+    port: 8080
+  glpi:
+    ip: 192.168.1.30
+    port: 80

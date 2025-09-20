@@ -1,0 +1,10 @@
+Internet
+   |
+[NAT VirtualBox]
+   |
+[pfSense WAN 10.0.2.x]
+[pfSense LAN 192.168.1.1/24]---(intnet)---[Client-A 192.168.1.10]
+                                  |
+                                  +------[Heimdall 192.168.1.20:8080]
+                                  |
+                                  +------[GLPI 192.168.1.30]

@@ -1,0 +1,5 @@
+interface,action,source,destination,protocol,port,description,position,enabled,log
+LAN,pass,(system),pfSense GUI,TCP,443,Anti-lockout (auto),0,yes,no
+LAN,block,LAN net,any,any,any,Block all LAN -> Internet,10,yes,yes
+LAN,block,LAN net,HEIMDALL_HOST,TCP,HEIMDALL_PORT,Block LAN -> Heimdall:8080,20,yes,yes
+LAN,pass,LAN net,LAN net,any,any,Allow LAN to LAN (services internes),100,yes,no
